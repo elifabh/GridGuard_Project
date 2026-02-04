@@ -1,3 +1,6 @@
+
+
+
 # ⚡ GridGuard Enterprise: Sovereign AI for Grid Stability
 
 ![Project Status](https://img.shields.io/badge/Status-Live_Simulation-success)
@@ -7,7 +10,6 @@
 
 > **Solving Ireland's "Duck Curve" crisis with autonomous Agentic AI.**
 
----
 
 ## 📖 Project Overview
 
@@ -53,22 +55,38 @@ The system operates on a three-layer architecture:
 * CUDA (Optional, for GPU acceleration)
 
 ### 1. Clone the Repository
+```bash
+git clone [https://github.com/elifabh/GridGuard_Project.git](https://github.com/elifabh/GridGuard_Project.git)
+cd GridGuard_Project
 
-git clone [https://github.com/elifgul/gridguard.git](https://github.com/elifgul/gridguard.git)
-cd gridguard 
+```
 
 ### 2. Install Dependencies
+
+```bash
 pip install -r requirements.txt
-(Key libraries: dash, pandas, torch, plotly, fpdf, dash-bootstrap-components)
+
+```
+
+*(Key libraries: `dash`, `pandas`, `torch`, `plotly`, `fpdf`, `dash-bootstrap-components`)*
 
 ### 3. Launch Mission Control
+
+```bash
 python dashboard.py
 
-### 4. Access the Dashboard
-Open your browser and navigate to: http://127.0.0.1:8050/
+```
 
-### 📂 Project Structure
-Plaintext
+### 4. Access the Dashboard
+
+Open your browser and navigate to:
+`http://127.0.0.1:8050/`
+
+---
+
+## 📂 Project Structure
+
+```text
 GridGuard_Project/
 ├── assets/                  # CSS, Images, and Fonts
 │   ├── images/              # Chip icon, Duck Curve diagrams
@@ -81,20 +99,29 @@ GridGuard_Project/
 ├── requirements.txt         # Python Dependencies
 └── README.md                # Project Documentation
 
+```
 
-### 🌍 Impact Analysis
-- Economic: Unlocks millions in lost revenue by arbitraging price differentials.
+---
 
-- Environmental: Reduces reliance on fossil-fuel peaker plants by utilizing stored wind energy.
+## 🌍 Impact Analysis
 
-- Sovereign: Demonstrates that critical infrastructure AI can be built and hosted entirely within Ireland.
+* **Economic:** Unlocks millions in lost revenue by arbitraging price differentials.
+* **Environmental:** Reduces reliance on fossil-fuel peaker plants by utilizing stored wind energy.
+* **Sovereign:** Demonstrates that critical infrastructure AI can be built and hosted entirely within Ireland.
 
-### 👤 Author & Producer
-Elif Gul Abdul Halim
+---
 
-AI Engineer & Project Lead
+## 👤 Author & Producer
 
-Specialization: Sovereign AI & HPC Systems
+**Elif Gul Abdul Halim**
 
-"The grid of the future doesn't just transmit power; it thinks." — GridGuard
+* *AI Engineer & Project Lead*
+* *Specialization:* Sovereign AI & HPC Systems
+
+---
+
+> *"The grid of the future doesn't just transmit power; it thinks."* — **GridGuard**
+
+```
+
 ```
