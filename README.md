@@ -122,6 +122,4 @@ GridGuard_Project/
 
 > *"The grid of the future doesn't just transmit power; it thinks."* — **GridGuard**
 
-```
 
-```
