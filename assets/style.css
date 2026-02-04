@@ -1,23 +1,82 @@
+/* assets/style.css - HIGH CONTRAST MONSTER THEME */
 body {
-    background-color: #0b0c10;
-    color: #c5c6c7;
-    font-family: 'Segoe UI', sans-serif;
+    background-color: #050505;
+    color: #ffffff;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
 }
-.glass-panel {
-    background: rgba(31, 40, 51, 0.7);
-    backdrop-filter: blur(10px);
-    border: 1px solid #45a29e;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-}
+
+/* Sidebar */
 .sidebar {
     position: fixed;
     top: 0; left: 0; bottom: 0;
     width: 18rem;
     padding: 2rem 1rem;
-    background-color: #1f2833;
-    border-right: 1px solid #45a29e;
+    background-color: #121212; /* Tam siyah değil */
+    border-right: 1px solid #333;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.8);
+    z-index: 1000;
 }
-.text-info { color: #66fcf1 !important; }
-.text-success { color: #39ff14 !important; }
+
+/* Glass Panel (Cam Efekti) */
+.glass-panel {
+    background: rgba(20, 20, 20, 0.85); /* Daha koyu zemin */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid #45a29e; /* Neon Çerçeve */
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s;
+}
+.glass-panel:hover {
+    border-color: #66fcf1;
+    box-shadow: 0 0 15px rgba(102, 252, 241, 0.2);
+}
+
+/* Kritik: Silik Yazıları Düzeltme */
+.text-muted {
+    color: #aaaaaa !important; /* Çok daha açık gri */
+}
+p, h1, h2, h3, h4, h5, h6, li, span, div {
+    text-shadow: 0 1px 2px rgba(0,0,0,0.8); /* Okunabilirlik gölgesi */
+}
+
+/* Neon Renkler */
+.text-info { color: #66fcf1 !important; text-shadow: 0 0 5px rgba(102,252,241,0.6); }
+.text-success { color: #39ff14 !important; text-shadow: 0 0 5px rgba(57,255,20,0.6); }
+.text-warning { color: #ffeb3b !important; }
+.text-danger { color: #ff0055 !important; text-shadow: 0 0 5px rgba(255,0,85,0.6); }
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    border: 2px solid #333;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 100%);
+    border-radius: 18px;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 100px;
+    padding-left: 40px;
+}
+
+/* Log Box */
+.log-box {
+    background: rgba(0,0,0,0.5);
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+}
