@@ -77,9 +77,8 @@ sidebar = html.Div([
     ], className="mt-auto")
 ], className="sidebar")
 
-# --- TAB 0: PROJECT OVERVIEW (HİZALAMA DÜZELTİLDİ) ---
+# --- TAB 0: PROJECT OVERVIEW ---
 tab0 = html.Div([
-    # 1. Hero Section (Aynı)
     html.Div([
         html.Div(className="hero-overlay"),
         html.Div([
@@ -90,78 +89,55 @@ tab0 = html.Div([
     ], className="hero-section", style={"backgroundImage": "url('/assets/images/hero_cover.png')"}),
 
     dbc.Container([
-        # --- BÖLÜM 1: PROBLEM (BAŞLIK DIŞARI ALINDI, HİZA DÜZELDİ) ---
         html.H2("1. The Energy Transition Crisis", className="text-white fw-bold mb-4 border-bottom border-secondary pb-2"),
-        
         dbc.Row([
-            # Sol Kutu: Metin
             dbc.Col([
                 html.Div([
                     html.H4("The 'Duck Curve' & Curtailment", className="text-danger fw-bold mb-3"),
-                    html.P("As Ireland integrates more renewable wind energy, a critical imbalance emerges. During high-wind, low-demand periods (often at night), excess clean energy cannot be stored and must be 'curtailed' (wasted).", className="text-muted"),
-                    html.P("Conversely, peak demand often occurs when wind is low, forcing reliance on fossil fuels. This mismatch destabilizes the grid and spikes prices.", className="text-muted"),
+                    html.P("As Ireland integrates more renewable wind energy, a critical imbalance emerges. During high-wind, low-demand periods, excess clean energy is wasted.", className="text-muted"),
+                    html.P("Conversely, peak demand forces reliance on fossil fuels. This mismatch destabilizes the grid and spikes prices.", className="text-muted"),
                     html.Ul([
-                        html.Li(html.Span("12%+ Wind Energy Wasted annually due to grid inflexibility.", className="text-white")),
-                        html.Li(html.Span("Increasing Grid Inertia Risks with non-synchronous generation.", className="text-white")),
+                        html.Li(html.Span("12%+ Wind Energy Wasted annually.", className="text-white")),
+                        html.Li(html.Span("Increasing Grid Inertia Risks.", className="text-white")),
                     ], className="mt-3 text-muted")
                 ], className="glass-panel h-100 p-4")
-            ], width=6, className="d-flex"), # d-flex boyutu eşitler
-
-            # Sağ Kutu: Resim (Artık kaymayacak)
+            ], width=6, className="d-flex"),
             dbc.Col([
                 html.Div([
                     html.Img(src='/assets/images/duck_curve_diagram.png', className="img-fluid rounded shadow-lg border border-secondary", style={"maxHeight": "400px", "objectFit": "cover"}, alt="Duck Curve Diagram"),
-                    html.P("Figure 1: The 'Duck Curve' illustrating supply/demand mismatch.", className="text-center text-muted small mt-2 fst-italic")
+                    html.P("Figure 1: The 'Duck Curve' mismatch.", className="text-center text-muted small mt-2 fst-italic")
                 ], className="glass-panel h-100 p-2 d-flex flex-column justify-content-center align-items-center w-100")
             ], width=6, className="d-flex"),
-        ], className="mb-5 align-items-stretch"), # align-items-stretch ile yükseklikler eşitlenir
+        ], className="mb-5 align-items-stretch"),
 
-        # --- BÖLÜM 2: ÇÖZÜM ---
-        html.H2("2. The GridGuard Solution: Autonomous Edge AI", className="text-white fw-bold mb-4 pt-4 border-top border-secondary"),
+        html.H2("2. The GridGuard Solution", className="text-white fw-bold mb-4 pt-4 border-top border-secondary"),
         dbc.Row([
             dbc.Col([
                 html.Div([
                     html.I(className="bi bi-cloud-download-fill display-4 text-info mb-3"),
-                    html.H4("A. Real-time Ingestion", className="text-white fw-bold"),
-                    html.P("Secure telemetry streams from Met Éireann (weather) and SEMO (market pricing) are buffered directly into CloudCIX HPC storage.", className="text-muted small")
+                    html.H4("A. Ingestion", className="text-white fw-bold"),
+                    html.P("Secure telemetry streams from Met Éireann & SEMO buffered into CloudCIX HPC.", className="text-muted small")
                 ], className="glass-panel text-center h-100 p-4")
             ], width=4, className="d-flex"),
             dbc.Col([
                 html.Div([
                     html.I(className="bi bi-cpu-fill display-4 text-success mb-3"),
-                    html.H4("B. HPC AI Core", className="text-white fw-bold"),
-                    html.P("Our Dueling-DQN Reinforcement Learning agent, powered by Bare Metal GPUs, predicts price spikes and decides optimal BESS actions in milliseconds.", className="text-muted small")
+                    html.H4("B. AI Core", className="text-white fw-bold"),
+                    html.P("Dueling-DQN Agent on Bare Metal GPUs predicts spikes and decides actions.", className="text-muted small")
                 ], className="glass-panel text-center h-100 p-4", style={"border": "2px solid #39ff14"})
             ], width=4, className="d-flex"),
             dbc.Col([
                 html.Div([
                     html.I(className="bi bi-lightning-charge-fill display-4 text-warning mb-3"),
-                    html.H4("C. Grid Execution", className="text-white fw-bold"),
-                    html.P("Signals are sent to Battery Energy Storage Systems (BESS) for immediate arbitrage (charge/discharge) and frequency stabilization.", className="text-muted small")
+                    html.H4("C. Execution", className="text-white fw-bold"),
+                    html.P("Immediate arbitrage signals sent to Battery Systems (BESS).", className="text-muted small")
                 ], className="glass-panel text-center h-100 p-4")
             ], width=4, className="d-flex"),
         ], className="mb-5 align-items-stretch"),
-
-        # --- BÖLÜM 3: ETKİ ---
-        html.H2("3. Projected Impact & Benefits", className="text-white fw-bold mb-4 pt-4 border-top border-secondary"),
-        dbc.Row([
-            dbc.Col(html.Div([
-                html.H1("24/7", className="text-success fw-bold"),
-                html.P("Autonomous Grid Balancing", className="text-uppercase small text-muted")
-            ], className="glass-panel text-center p-4 h-100"), width=4),
-            dbc.Col(html.Div([
-                html.H1("↓ CO2", className="text-info fw-bold"),
-                html.P("Maximizing Renewable Usage", className="text-uppercase small text-muted")
-            ], className="glass-panel text-center p-4 h-100"), width=4),
-            dbc.Col(html.Div([
-                html.H1("Sovereign", className="text-warning fw-bold"),
-                html.P("100% Data Residency in Cork", className="text-uppercase small text-muted")
-            ], className="glass-panel text-center p-4 h-100"), width=4),
-        ], className="mb-5")
     ])
 ], id="tab-0")
 
-# --- TAB 1: LIVE SIMULATION (DEĞİŞMEDİ) ---
+# --- TAB 1: LIVE SIMULATION ---
 tab1 = html.Div([
     dbc.Container([
         html.H2("Mission Control", className="text-white mb-4 fw-bold"),
@@ -179,7 +155,7 @@ tab1 = html.Div([
                         ], 
                         value='normal', className="mb-3", clearable=False
                     ),
-                    html.Label("Forecast Horizon", className="text-info fw-bold small"),
+                    html.Label("Horizon", className="text-info fw-bold small"),
                     dcc.Slider(id='steps', min=24, max=72, step=12, value=48, marks={24:'24h',48:'48h',72:'72h'}),
                     dbc.Button([html.I(className="bi bi-lightning-fill me-2"), "START AI AGENT"], id='run-btn', color="primary", className="w-100 mt-4 fw-bold py-3 shadow-lg")
                 ], className="glass-panel mb-3"),
@@ -220,7 +196,7 @@ tab1 = html.Div([
     ])
 ], id="tab-1", style={"display":"none"})
 
-# --- TAB 2: ARCHITECTURE (DEĞİŞMEDİ) ---
+# --- TAB 2: ARCHITECTURE ---
 tab2 = html.Div([
     dbc.Container([
         html.H2("System Architecture", className="text-white mb-4 fw-bold"),
@@ -255,7 +231,7 @@ tab2 = html.Div([
     ])
 ], id="tab-2", style={"display":"none"})
 
-# --- TAB 3: REPORTS (DEĞİŞMEDİ) ---
+# --- TAB 3: REPORTS ---
 tab3 = html.Div([
     dbc.Container([
         html.H2("Reporting Module", className="text-white mb-4"),
@@ -269,9 +245,19 @@ tab3 = html.Div([
     ])
 ], id="tab-3", style={"display":"none"})
 
-app.layout = html.Div([dcc.Store(id='store'), sidebar, html.Div([tab0, tab1, tab2, tab3], id="content", style={"marginLeft":"19rem","padding":"2rem"})])
+# --- LAYOUT & IMZA ---
+app.layout = html.Div([
+    dcc.Store(id='store'), 
+    sidebar, 
+    html.Div([tab0, tab1, tab2, tab3], id="content", style={"marginLeft":"19rem","padding":"2rem"}),
+    # SAĞ ALTTAKİ İMZA
+    html.Div([
+        html.I(className="bi bi-person-circle me-2"),
+        "Producer: Elif Gul Abdul Halim"
+    ], className="producer-tag")
+])
 
-# --- CALLBACKS (HİÇBİRİ DEĞİŞMEDİ) ---
+# --- CALLBACKS ---
 @app.callback(
     [Output('tab-0','style'), Output('tab-1','style'), Output('tab-2','style'), Output('tab-3','style'),
      Output('btn-0','active'), Output('btn-1','active'), Output('btn-2','active'), Output('btn-3','active')],
@@ -313,11 +299,8 @@ def run_sim(n, scen, steps):
     logs = []
     total_reward, sells, charges = 0, 0, 0
     
-    # --- GARANTİLİ DEMO DÖNGÜSÜ (ZİG-ZAG) ---
     for i in range(steps):
         curr_price = states[0][1] * 100
-        
-        # Her 10 adımda bir kesin işlem
         if (i % 20) < 10:
             act = 0 # Charge
             if states[0][0] > 0.95: act = 2 
@@ -341,7 +324,6 @@ def run_sim(n, scen, steps):
         h_wind.append(env.winds[env.current_steps[0]])
         states = nxt
 
-    # LLM
     m_cmt, a_cmt = "Unavailable", "Unavailable"
     if analyst:
         stats = {'avg_wind':np.mean(h_wind), 'avg_price':np.mean(h_price), 'profit':total_reward, 'charge_count':0}

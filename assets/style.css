@@ -80,3 +80,49 @@ p, h1, h2, h3, h4, h5, h6, li, span, div {
     padding: 10px;
     font-family: 'Courier New', monospace;
 }
+
+/* --- HAREKETLİ NEON ÇERÇEVE (MOVING LIGHTS) --- */
+@keyframes neonBorder {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body:before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+    /* Neon renkler */
+    background: linear-gradient(60deg, #0b0c10, #729bb3, #0b0c10, #658eaa, #0b0c10);
+    background-size: 300% 300%;
+    animation: neonBorder 6s ease infinite;
+    pointer-events: none;
+}
+
+/* Sayfa İçeriğini biraz içeri alalım ki ışıklar görünsün */
+#page-content {
+    margin: 10px;
+    border-radius: 15px;
+    background-color: rgba(11, 12, 16, 0.95); /* İçerik zemini */
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+    min-height: 95vh;
+}
+
+/* --- PRODUCER İMZASI --- */
+.producer-tag {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #66fcf1;
+    color: #66fcf1;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0 0 10px rgba(102, 252, 241, 0.3);
+    z-index: 9999;
+    animation: fadeIn 2s ease-in;
+}
