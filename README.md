@@ -16,7 +16,6 @@
 By deploying **Reinforcement Learning (Dueling DQN)** agents on **Sovereign HPC Infrastructure (CloudCIX)**, GridGuard predicts energy spikes, manages Battery Energy Storage Systems (BESS) in real-time, and ensures 100% data residency within Ireland.
 
 ### 🏆 Key Innovation
-
 Unlike traditional "Chatbots," GridGuard is an **"Actionbot"**. It doesn't just analyze data; it makes millisecond-level decisions to Buy, Sell, or Hold energy, turning grid volatility into profit and carbon savings.
 
 ---
@@ -25,13 +24,13 @@ Unlike traditional "Chatbots," GridGuard is an **"Actionbot"**. It doesn't just 
 
 The project features a state-of-the-art **Mission Control Interface** built with Plotly Dash.
 
-| Feature                    | Description                                                                             |
-| :------------------------- | :-------------------------------------------------------------------------------------- |
-| **🤖 Autonomous Agent**    | A Dueling-DQN agent that trades energy against live market data.                        |
-| **📊 Real-time Analytics** | Live visualization of the "Duck Curve," market prices, and BESS state-of-charge (SoC).  |
-| **🧠 Local LLM Analyst**   | An embedded AI analyst that explains market conditions in plain English (No API calls). |
-| **📄 Executive Reporting** | One-click PDF generation for stakeholder reporting (Profit & CO2 metrics).              |
-| **🇮🇪 Data Sovereignty**    | Designed to run on Bare Metal GPUs, ensuring no data leaves Irish jurisdiction.         |
+| Feature | Description |
+| :--- | :--- |
+| **🤖 Autonomous Agent** | A Dueling-DQN agent that trades energy against live market data. |
+| **📊 Real-time Analytics** | Live visualization of the "Duck Curve," market prices, and BESS state-of-charge (SoC). |
+| **🧠 Local LLM Analyst** | An embedded AI analyst that explains market conditions in plain English (No API calls). |
+| **📄 Executive Reporting** | One-click PDF generation for stakeholder reporting (Profit & CO2 metrics). |
+| **🇮🇪 Data Sovereignty** | Designed to run on Bare Metal GPUs, ensuring no data leaves Irish jurisdiction. |
 
 ---
 
@@ -41,8 +40,8 @@ The system operates on a three-layer architecture:
 
 1.  **Ingestion Layer (MQTT/Rest):** Securely buffers telemetry from Met Éireann (Weather) and SEMO (Market Prices).
 2.  **HPC AI Core (The Brain):**
-    - **LSTM:** Forecasts wind generation.
-    - **Dueling DQN:** Executes arbitrage strategies (Charge/Discharge).
+    * **LSTM:** Forecasts wind generation.
+    * **Dueling DQN:** Executes arbitrage strategies (Charge/Discharge).
 3.  **Execution Layer (Edge):** Sends signals to BESS hardware with <100ms latency.
 
 ---
@@ -50,27 +49,25 @@ The system operates on a three-layer architecture:
 ## 💻 Installation & Usage
 
 ### Prerequisites
-
-- Python 3.8+
-- CUDA (Optional, for GPU acceleration)
+* Python 3.8+
+* CUDA (Optional, for GPU acceleration)
 
 ### 1. Clone the Repository
 
-```bash
 git clone [https://github.com/elifgul/gridguard.git](https://github.com/elifgul/gridguard.git)
-cd gridguard
+cd gridguard 
 
-2. Install Dependencies
+### 2. Install Dependencies
 pip install -r requirements.txt
 (Key libraries: dash, pandas, torch, plotly, fpdf, dash-bootstrap-components)
 
-3. Launch Mission Control
+### 3. Launch Mission Control
 python dashboard.py
 
-4. Access the Dashboard
+### 4. Access the Dashboard
 Open your browser and navigate to: http://127.0.0.1:8050/
 
-📂 Project Structure
+### 📂 Project Structure
 GridGuard_Project/
 ├── assets/                  # CSS, Images, and Fonts
 │   ├── images/              # Chip icon, Duck Curve diagrams
@@ -84,14 +81,14 @@ GridGuard_Project/
 └── README.md                # Project Documentation
 
 
-🌍 Impact Analysis
+### 🌍 Impact Analysis
 - Economic: Unlocks millions in lost revenue by arbitraging price differentials.
 
 - Environmental: Reduces reliance on fossil-fuel peaker plants by utilizing stored wind energy.
 
 - Sovereign: Demonstrates that critical infrastructure AI can be built and hosted entirely within Ireland.
 
-👤 Author & Producer
+### 👤 Author & Producer
 Elif Gul Abdul Halim
 
 AI Engineer & Project Lead
