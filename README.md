@@ -68,6 +68,7 @@ python dashboard.py
 Open your browser and navigate to: http://127.0.0.1:8050/
 
 ### 📂 Project Structure
+Plaintext
 GridGuard_Project/
 ├── assets/                  # CSS, Images, and Fonts
 │   ├── images/              # Chip icon, Duck Curve diagrams
