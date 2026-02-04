@@ -61,18 +61,16 @@ git clone [https://github.com/elifgul/gridguard.git](https://github.com/elifgul/
 cd gridguard
 
 2. Install Dependencies
-Bash
 pip install -r requirements.txt
 (Key libraries: dash, pandas, torch, plotly, fpdf, dash-bootstrap-components)
 
 3. Launch Mission Control
-Bash
 python dashboard.py
+
 4. Access the Dashboard
 Open your browser and navigate to: http://127.0.0.1:8050/
 
 📂 Project Structure
-Plaintext
 GridGuard_Project/
 ├── assets/                  # CSS, Images, and Fonts
 │   ├── images/              # Chip icon, Duck Curve diagrams
@@ -84,12 +82,14 @@ GridGuard_Project/
 ├── dashboard.py             # Main Application Entry Point
 ├── requirements.txt         # Python Dependencies
 └── README.md                # Project Documentation
+
+
 🌍 Impact Analysis
-Economic: Unlocks millions in lost revenue by arbitraging price differentials.
+- Economic: Unlocks millions in lost revenue by arbitraging price differentials.
 
-Environmental: Reduces reliance on fossil-fuel peaker plants by utilizing stored wind energy.
+- Environmental: Reduces reliance on fossil-fuel peaker plants by utilizing stored wind energy.
 
-Sovereign: Demonstrates that critical infrastructure AI can be built and hosted entirely within Ireland.
+- Sovereign: Demonstrates that critical infrastructure AI can be built and hosted entirely within Ireland.
 
 👤 Author & Producer
 Elif Gul Abdul Halim
